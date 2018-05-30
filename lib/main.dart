@@ -21,12 +21,15 @@ void main() => runApp(new MyApp());
 //Statefulwidget 在其生命周期保持的状态可能会变化，
 // 实现一个有状态的 widget 至少需要两个类：StatefulWidgets类和State类
 //StatefulWidget类本身是不可变的，但State类可存在于Widget的整个生命周期中
-
+//Flutter布局Layout的核心就是Widget。在Flutter里，基本上任何东西都是Widget
 class MyApp extends StatelessWidget {
   final wordPair = new WordPair.random();
 
   @override
   Widget build(BuildContext context) {
+    //Scaffold必须放在MaterialApp里面，否则会报错
+    //非Material下，没有Appbar、背景色和标题等，所有的内容都需要自定义。
+    //非Material下Text的textDirection属性是必须的
     return new MaterialApp(
       title: 'FlutterApp',
       theme: new ThemeData(primarySwatch: Colors.purple),

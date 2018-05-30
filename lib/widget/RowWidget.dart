@@ -7,6 +7,8 @@ class RowWidget extends StatelessWidget {
         appBar: new AppBar(
           title: new Text("Text使用"),
         ),
+        //MainAxisAlignment表示主轴方向（水平方向）
+        // CrossAxisAlignment表示副轴方向（和主轴垂直，即垂直方向）
         body: new Column(
           children: <Widget>[
             new Row(
