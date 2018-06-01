@@ -9,6 +9,8 @@ import 'package:flutter_app/widget/ButtonWidget.dart';
 import 'package:flutter_app/widget/ColumeWidget.dart';
 import 'package:flutter_app/widget/ContainerWidget.dart';
 import 'package:flutter_app/widget/ImageWidget.dart';
+import 'package:flutter_app/widget/IntentWidget.dart';
+import 'package:flutter_app/widget/NavigatorWidget.dart';
 import 'package:flutter_app/widget/RowWidget.dart';
 import 'package:flutter_app/widget/TabbedAppBarSample.dart';
 import 'package:flutter_app/widget/TextWidget.dart';
@@ -19,6 +21,7 @@ import 'package:flutter_app/RandomWords.dart';
 import 'package:flutter_app/TutorialHome.dart';
 
 void main() => runApp(new MyApp());
+
 //Stateless widgets 是不可改变的，这意味着它们的属性不能改变——所有的值都是 final 的。
 //Statefulwidget 在其生命周期保持的状态可能会变化，
 // 实现一个有状态的 widget 至少需要两个类：StatefulWidgets类和State类
@@ -38,7 +41,7 @@ class MyApp extends StatelessWidget {
 //      home: new RandomWords(),//listview
 //      home: new MyScaffold(),//布局
 //      home: new TutorialHome(),
-    home: new MyButton(),//处理手势
+//    home: new MyButton(),//处理手势
 //      home: new Counter(), //计数
 //      home: new ShoppingList(
 //        products: <Product>[
@@ -55,11 +58,12 @@ class MyApp extends StatelessWidget {
 //    home: new ButtonWidget(),
 //    home: new ListViewWidget(),
 //    home: new MultiWidget(),
+//    home: new NavigatorWidget(),//路由传值
+      home: new IntentWidget(),//接收返回值
 //    home: new BasicAppBarSample(),
 //    home: new TabbedAppBarSample(),
     );
   }
-
 
 //  new Text(
 //  'Hello, $_name! How are you?',
