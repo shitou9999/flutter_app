@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 ////Container：矩形控件，可与BoxDecoration配合来装饰 background, a border, or a shadow，
 //对于一个没有子Widget的Container，在没有一些约束的条件时，它会尽可能的大；
 // 而一旦有了约束或者子Widget，它就会变得尽可能小。
+//Container布局或放widget
+
 class ContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {

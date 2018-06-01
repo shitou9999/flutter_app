@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import 'package:flutter_app/list/ListViewWidget.dart';
+import 'package:flutter_app/list/MultiWidget.dart';
 import 'package:flutter_app/shop/ShoppingList.dart';
 import 'package:flutter_app/shop/ShoppingListItem.dart';
 import 'package:flutter_app/widget/BasicAppBarSample.dart';
@@ -10,11 +12,11 @@ import 'package:flutter_app/widget/ImageWidget.dart';
 import 'package:flutter_app/widget/RowWidget.dart';
 import 'package:flutter_app/widget/TabbedAppBarSample.dart';
 import 'package:flutter_app/widget/TextWidget.dart';
-//import 'package:flutter_app/Counter.dart';
-//import 'package:flutter_app/MyButton.dart';
-//import 'package:flutter_app/MyScaffold.dart';
-//import 'package:flutter_app/RandomWords.dart';
-//import 'package:flutter_app/TutorialHome.dart';
+import 'package:flutter_app/Counter.dart';
+import 'package:flutter_app/MyButton.dart';
+import 'package:flutter_app/MyScaffold.dart';
+import 'package:flutter_app/RandomWords.dart';
+import 'package:flutter_app/TutorialHome.dart';
 
 void main() => runApp(new MyApp());
 //Stateless widgets 是不可改变的，这意味着它们的属性不能改变——所有的值都是 final 的。
@@ -36,7 +38,7 @@ class MyApp extends StatelessWidget {
 //      home: new RandomWords(),//listview
 //      home: new MyScaffold(),//布局
 //      home: new TutorialHome(),
-//    home: new MyButton(),//处理手势
+    home: new MyButton(),//处理手势
 //      home: new Counter(), //计数
 //      home: new ShoppingList(
 //        products: <Product>[
@@ -51,7 +53,9 @@ class MyApp extends StatelessWidget {
 //    home: new RowWidget(),
 //    home: new ColumeWidget(),
 //    home: new ButtonWidget(),
-    home: new BasicAppBarSample(),
+//    home: new ListViewWidget(),
+//    home: new MultiWidget(),
+//    home: new BasicAppBarSample(),
 //    home: new TabbedAppBarSample(),
     );
   }
