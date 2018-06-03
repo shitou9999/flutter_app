@@ -27,6 +27,7 @@ class ImageWidget extends StatelessWidget{
           //当引用图片的时候，需要在pubspec.yaml的文件中的flutter下添加assets
           // 资源图片 但是不同的手机有不同的像素比率，这时就需要根据手机的像素比率来加载不同图片
           // 做法很简单，只需要在图片同级目录下创建2.0x/…和3.0/…的目录就可以了
+          ///Flutter遵循像iOS这样简单的3种分辨率格式: 1x, 2x, and 3x.
           new Image.asset('images/img001.jpg'),
           new Image.asset('images/img002.jpg'),
           //网络图片 支持GIF动画！默认不能处理一些高级功能，例如在在下载完图片后加载或缓存图片到设备中后，

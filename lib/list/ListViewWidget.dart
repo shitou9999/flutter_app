@@ -2,16 +2,52 @@ import 'package:flutter/material.dart';
 
 ///使用标准ListView构造函数非常适合仅包含少量条目的列表。我们使用内置的ListTile Widget来作为列表项。
 class ListViewWidget extends StatelessWidget {
-@override
+  @override
   Widget build(BuildContext context) {
     return new Scaffold(
       appBar: new AppBar(
         title: new Text("ListView使用"),
       ),
 //      body: _getListBuild(),
-      body: _getGridView(context),
+//      body: _getGridView(context),
+      body: new Center(
+        child: new ListView(
+          children: list,
+        ),
+      ),
     );
   }
+
+  List<Widget> list = <Widget>[
+    new ListTile(
+      title: new Text('CineArts at the Empire',
+          style: new TextStyle(fontWeight: FontWeight.w500, fontSize: 20.0)),
+      subtitle: new Text('85 W Portal Ave'),
+      leading: new Icon(
+        Icons.theaters,
+        color: Colors.blue[500],
+      ),
+    ),
+    new ListTile(
+      title: new Text('The Castro Theater',
+          style: new TextStyle(fontWeight: FontWeight.w500, fontSize: 20.0)),
+      subtitle: new Text('429 Castro St'),
+      leading: new Icon(
+        Icons.theaters,
+        color: Colors.blue[500],
+      ),
+    ),
+    new Divider(),
+    new ListTile(
+      title: new Text('K\'s Kitchen',
+          style: new TextStyle(fontWeight: FontWeight.w500, fontSize: 20.0)),
+      subtitle: new Text('757 Monterey Blvd'),
+      leading: new Icon(
+        Icons.restaurant,
+        color: Colors.blue[500],
+      ),
+    ),
+  ];
 
   _getListView() {
     return new ListView(
@@ -87,6 +123,23 @@ class ListViewWidget extends StatelessWidget {
         );
       }),
     );
+  }
+
+  ///怎么知道哪个列表项被点击??????????????通过传入的处理回调来进行操作
+  _getListData() {
+    List<Widget> widgets = [];
+    for (int i = 0; i < 100; i++) {
+      widgets.add(new GestureDetector(
+        child: new Padding(
+          padding: new EdgeInsets.all(10.0),
+          child: new Text("Row $i"),
+        ),
+        onTap: () {
+          print('row tapped');
+        },
+      ));
+    }
+    return widgets;
   }
 }
 
