@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+///一个route是一个屏幕或页面的抽象，Navigator是管理route的Widget
 ///接收值测试
 class IntentWidget extends StatelessWidget {
   @override

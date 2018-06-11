@@ -20,6 +20,7 @@ import 'package:flutter_app/widget/ButtonWidget.dart';
 import 'package:flutter_app/widget/CardWidget.dart';
 import 'package:flutter_app/widget/ColumeWidget.dart';
 import 'package:flutter_app/widget/ContainerWidget.dart';
+import 'package:flutter_app/widget/FileReadWriteWidget.dart';
 import 'package:flutter_app/widget/GridViewWidget.dart';
 import 'package:flutter_app/widget/HttpWidget.dart';
 import 'package:flutter_app/widget/ImageWidget.dart';
@@ -29,6 +30,7 @@ import 'package:flutter_app/widget/NavigatorWidget.dart';
 import 'package:flutter_app/widget/RowWidget.dart';
 import 'package:flutter_app/widget/StackWidget.dart';
 import 'package:flutter_app/widget/TabbedAppBarSample.dart';
+import 'package:flutter_app/widget/TextFieldWidget.dart';
 import 'package:flutter_app/widget/TextWidget.dart';
 import 'package:flutter_app/Counter.dart';
 import 'package:flutter_app/MyButton.dart';
@@ -53,6 +55,10 @@ class MyApp extends StatelessWidget {
   ///  任何应用程序都可以使用widgets library中的widget，
   /// 但只有Material应用程序可以使用Material Components库。
   ///
+  /// 为了获得良好的自动格式化，建议您采用可选的尾部逗号。
+  /// 始终在函数、方法和构造函数的参数列表末尾添加尾随逗号，以便保留您的编码格式!
+  ///
+  /// Flutter使用自己的高性能渲染引擎来绘制widget,Flutter的不同是因为它核心只有一层轻量的C/C++代码
   @override
   Widget build(BuildContext context) {
     //Scaffold必须放在MaterialApp里面，否则会报错
@@ -60,7 +66,8 @@ class MyApp extends StatelessWidget {
     //非Material下Text的textDirection属性是必须的
     return new MaterialApp(
       title: 'FlutterApp',
-      theme: new ThemeData(primarySwatch: Colors.purple),
+      theme: new ThemeData(primarySwatch: Colors.purple),//主色
+
 //      this.routes: const <String, WidgetBuilder>{},///页面路由配置
 //      routes: <String, WidgetBuilder> {
 //        '/a': (BuildContext context) => new MyPage(title: 'page A'),
@@ -97,7 +104,9 @@ class MyApp extends StatelessWidget {
 //    home: new AddRemoveWidget(),///如何在布局中添加或删除组件
 //    home: new AnimationStudy(),///对视图进行动画处理
 //    home: new NetWidget(),///获取网络数据ListView显示
-    home: new LifecycleWidget(),///生命周期监听
+//    home: new LifecycleWidget(),///生命周期监听
+//    home: new TextFieldWidget(),///表单输入
+    home: new FileReadWriteWidget(),///读写文件
 //    home: new MultiWidget(),
 //    home: new NavigatorWidget(),//路由传值
 //      home: new IntentWidget(),//接收返回值

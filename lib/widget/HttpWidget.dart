@@ -18,6 +18,10 @@ class HttpWidget extends StatelessWidget {
   ///     }
   ///   },
   /// )
+  ///
+  // Map data = JSON.decode(responseBody);
+// Assume the response body is something like: ['foo', { 'bar': 499 }]
+  //int barValue = data[1]['bar']; // barValue is set to 499
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -44,6 +48,14 @@ class HttpWidget extends StatelessWidget {
   }
 }
 
+//var url = "http://example.com/whatsit/create";
+//http.post(url, body: {"name": "doodle", "color": "blue"})
+//.then((response) {
+//print("Response status: ${response.statusCode}");
+//print("Response body: ${response.body}");
+//});
+//
+//http.read("http://example.com/foobar.txt").then(print);
 ///3. 将响应转换为自定义Dart对象
 ///01创建一个Post类
 ///我们需要创建一个Post类，它包含我们网络请求的数据。
